@@ -13,6 +13,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -44,6 +52,7 @@ alignment = 1
 
 [node name="Continue" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_ellxw")
 theme_override_font_sizes/normal_font_size = 28
 text = "CONTINUE"
@@ -51,6 +60,7 @@ fit_content = true
 
 [node name="NewGame" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_ellxw")
 theme_override_font_sizes/normal_font_size = 28
 text = "NEW GAME"
@@ -58,6 +68,7 @@ fit_content = true
 
 [node name="Options" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_fhaoe")
 theme_override_font_sizes/normal_font_size = 20
 text = "OPTIONS"
@@ -65,6 +76,7 @@ fit_content = true
 
 [node name="Version" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_ieqcy")
 theme_override_font_sizes/normal_font_size = 12
 text = "Ver 1.0.0
