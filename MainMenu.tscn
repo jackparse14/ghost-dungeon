@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwkswu017ktnv"]
+[gd_scene load_steps=5 format=3 uid="uid://bwkswu017ktnv"]
 
 [ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="1_qosdn"]
+[ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="2_ellxw"]
+[ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="3_fhaoe"]
+[ext_resource type="FontFile" uid="uid://cdng6c3qrt4j2" path="res://Assets/Fonts/scream_again/Scream Again.ttf" id="4_ieqcy"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -32,23 +35,29 @@ alignment = 1
 
 [node name="Continue" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
-text = "Continue
-"
+theme_override_fonts/normal_font = ExtResource("2_ellxw")
+theme_override_font_sizes/normal_font_size = 28
+text = "CONTINUE"
 fit_content = true
 
 [node name="NewGame" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
-text = "New Game
-"
+theme_override_fonts/normal_font = ExtResource("2_ellxw")
+theme_override_font_sizes/normal_font_size = 28
+text = "NEW GAME"
 fit_content = true
 
 [node name="Options" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
-text = "Options"
+theme_override_fonts/normal_font = ExtResource("3_fhaoe")
+theme_override_font_sizes/normal_font_size = 20
+text = "OPTIONS"
 fit_content = true
 
 [node name="Version" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_ieqcy")
+theme_override_font_sizes/normal_font_size = 12
 text = "Ver 1.0.0
 Par Studios"
 fit_content = true
