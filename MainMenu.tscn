@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwkswu017ktnv"]
+[gd_scene load_steps=8 format=3 uid="uid://bwkswu017ktnv"]
 
+[ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_k0lt8"]
 [ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="1_qosdn"]
 [ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="2_ellxw"]
 [ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="3_fhaoe"]
@@ -15,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k0lt8")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -170,3 +172,8 @@ custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 texture = ExtResource("5_j3ato")
 expand_mode = 3
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/QuitButton" to="." method="_on_QuitButton_pressed"]
