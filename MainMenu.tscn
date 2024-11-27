@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b422b7n8wtlgw"]
+[gd_scene load_steps=6 format=3 uid="uid://b422b7n8wtlgw"]
 
 [ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="1_qosdn"]
 [ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="2_ellxw"]
 [ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="3_fhaoe"]
 [ext_resource type="FontFile" uid="uid://cdng6c3qrt4j2" path="res://Assets/Fonts/scream_again/Scream Again.ttf" id="4_ieqcy"]
+[ext_resource type="Texture2D" uid="uid://dqrdkowiwavlf" path="res://Assets/Images/—Pngtree—three-dimensional halloween ghost_8531985.png" id="5_j3ato"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -88,5 +89,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Art" type="TextureRect" parent="MarginContainer/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
-texture = ExtResource("1_qosdn")
+texture = ExtResource("5_j3ato")
+expand_mode = 3
