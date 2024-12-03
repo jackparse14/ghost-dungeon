@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bwkswu017ktnv"]
 
-[ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_k0lt8"]
-[ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="1_qosdn"]
-[ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="2_ellxw"]
-[ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="3_fhaoe"]
-[ext_resource type="FontFile" uid="uid://cdng6c3qrt4j2" path="res://Assets/Fonts/scream_again/Scream Again.ttf" id="4_ieqcy"]
-[ext_resource type="Texture2D" uid="uid://dqrdkowiwavlf" path="res://Assets/Images/—Pngtree—three-dimensional halloween ghost_8531985.png" id="5_j3ato"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_grk1x"]
+[ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="2_q734t"]
+[ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="3_h0kk8"]
+[ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="4_423gf"]
+[ext_resource type="FontFile" uid="uid://cdng6c3qrt4j2" path="res://Assets/Fonts/scream_again/Scream Again.ttf" id="5_goylj"]
+[ext_resource type="Texture2D" uid="uid://dqrdkowiwavlf" path="res://Assets/Images/—Pngtree—three-dimensional halloween ghost_8531985.png" id="6_njtfj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3h312"]
 
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k0lt8")
+script = ExtResource("1_grk1x")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -48,7 +48,7 @@ alignment = 1
 
 [node name="Logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_qosdn")
+texture = ExtResource("2_q734t")
 
 [node name="MenuOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -64,7 +64,7 @@ theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ellxw")
+theme_override_fonts/font = ExtResource("3_h0kk8")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3h312")
@@ -88,7 +88,7 @@ theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ellxw")
+theme_override_fonts/font = ExtResource("3_h0kk8")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3h312")
@@ -113,7 +113,7 @@ theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_fhaoe")
+theme_override_fonts/font = ExtResource("4_423gf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3h312")
@@ -138,7 +138,7 @@ theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_fhaoe")
+theme_override_fonts/font = ExtResource("4_423gf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3h312")
@@ -157,7 +157,7 @@ text = "QUIT
 [node name="Version" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_ieqcy")
+theme_override_fonts/normal_font = ExtResource("5_goylj")
 theme_override_font_sizes/normal_font_size = 12
 text = "Ver 1.0.0
 Par Studios"
@@ -170,7 +170,7 @@ size_flags_horizontal = 3
 [node name="Art" type="TextureRect" parent="MarginContainer/HBoxContainer/CenterContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
-texture = ExtResource("5_j3ato")
+texture = ExtResource("6_njtfj")
 expand_mode = 3
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/ContinueButton" to="." method="_on_ContinueButton_pressed"]
