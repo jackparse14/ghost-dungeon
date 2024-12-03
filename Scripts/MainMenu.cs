@@ -27,6 +27,6 @@ public partial class MainMenu : Control
 	private void _on_QuitButton_pressed()
 	{
 		GD.Print("Quit Button Pressed");
-		GetTree().quit();
+		GetTree().Quit();
 	}
 }
