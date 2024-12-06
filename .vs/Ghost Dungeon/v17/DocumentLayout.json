@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|solutionrelative:scripts\\splashscreenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|f:\\godotprojects\\ghost-dungeon\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|solutionrelative:scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|f:\\godotprojects\\ghost-dungeon\\scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|solutionrelative:scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|f:\\godotprojects\\ghost-dungeon\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|solutionrelative:scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56D59370-5BE9-48A1-A19B-B62E0A19B70E}|Ghost Dungeon.csproj|f:\\godotprojects\\ghost-dungeon\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SplashScreenManager.cs",
+              "DocumentMoniker": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\SplashScreenManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\SplashScreenManager.cs",
+              "ToolTip": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\SplashScreenManager.cs",
+              "RelativeToolTip": "Scripts\\SplashScreenManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:30:06.534Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -38,12 +51,11 @@
               "RelativeToolTip": "Scripts\\MainMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:02:11.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T11:02:11.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Global.cs",
               "DocumentMoniker": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\Global.cs",
               "RelativeDocumentMoniker": "Scripts\\Global.cs",
@@ -56,28 +68,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameController.cs",
               "DocumentMoniker": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\GameController.cs",
               "RelativeDocumentMoniker": "Scripts\\GameController.cs",
               "ToolTip": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\GameController.cs",
               "RelativeToolTip": "Scripts\\GameController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T10:50:48.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SplashScreenManager.cs",
-              "DocumentMoniker": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\SplashScreenManager.cs",
-              "RelativeDocumentMoniker": "Scripts\\SplashScreenManager.cs",
-              "ToolTip": "F:\\GodotProjects\\ghost-dungeon\\Scripts\\SplashScreenManager.cs",
-              "RelativeToolTip": "Scripts\\SplashScreenManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T10:31:39.588Z",
               "EditorCaption": ""
             }
           ]

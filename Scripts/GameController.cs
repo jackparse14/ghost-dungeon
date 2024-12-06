@@ -15,6 +15,7 @@ public partial class GameController : Node
     public override void _Ready()
     {
         Global.gameController = this;
+        currentGuiScene = GetNode<Control>("GUI/SplashScreenManager");
     }
 
     public void Change3DScene(String newScene, bool delete = true, bool keepRunning = false)
