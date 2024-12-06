@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://pek8aff2hix0"]
+[gd_scene load_steps=8 format=3 uid="uid://pek8aff2hix0"]
+
+[ext_resource type="Texture2D" uid="uid://b7c6qbww3gl3u" path="res://Textures/Poliigon_BrickWallReclaimed_8320/4K/Poliigon_BrickWallReclaimed_8320_BaseColor.jpg" id="1_keidk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fbnc1"]
+size = Vector3(101, 1, 101)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wbtr2"]
+albedo_texture = ExtResource("1_keidk")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_irg7w"]
+material = SubResource("StandardMaterial3D_wbtr2")
+size = Vector2(101, 101)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fsljm"]
+sky_top_color = Color(0.343808, 0.563296, 0.879977, 1)
+sky_horizon_color = Color(0.713447, 0.844216, 1, 1)
+ground_bottom_color = Color(0.218843, 0.547073, 0.886917, 1)
+ground_horizon_color = Color(0.761243, 0.88046, 1, 1)
+
+[sub_resource type="Sky" id="Sky_a2qsr"]
+sky_material = SubResource("ProceduralSkyMaterial_fsljm")
+
+[sub_resource type="Environment" id="Environment_0wbdw"]
+background_mode = 2
+sky = SubResource("Sky_a2qsr")
 
 [node name="World3d" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239868, 3.05176e-05, 1.43384)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_fbnc1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_irg7w")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0wbdw")
