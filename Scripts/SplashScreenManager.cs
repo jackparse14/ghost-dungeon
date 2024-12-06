@@ -1,62 +1,68 @@
 using Godot;
+using System.Threading.Tasks;
 
-public partial class SplashScreenManager : Control
+namespace GhostDungeon.Scripts
 {
-    [Export] PackedScene loadScene;
-    [Export] float inTime = 0.5f;
-    [Export] float fadeInTime = 1.5f;
-    [Export] float pauseTime = 1.5f;
-    [Export] float fadeOutTime = 1.5f;
-    [Export] float outTime = 0.5f;
-    [Export] Node splashScreenContainer;
-
-    private Godot.Collections.Array<TextureRect> splashScreens;
-
-    public override void _Ready()
+    public partial class SplashScreenManager : Control
     {
-        getScreens();
-        fade();
-    }
+        [Export] PackedScene loadScene;
+        [Export] float inTime = 0.5f;
+        [Export] float fadeInTime = 1.5f;
+        [Export] float pauseTime = 1.5f;
+        [Export] float fadeOutTime = 1.5f;
+        [Export] float outTime = 0.5f;
+        [Export] Node splashScreenContainer;
 
-    public void getScreens()
-    {
-        splashScreens = new Godot.Collections.Array<TextureRect>();
-        foreach (TextureRect screen in splashScreenContainer.GetChildren())
+        private Godot.Collections.Array<Node> splashScreens;
+
+        public override async void _Ready()
         {
-            splashScreens.Add(screen);
-            screen.Modulate = new Color(screen.Modulate.R, screen.Modulate.G, screen.Modulate.B, 0.0f);
+            GetScreens();
+            await Fade();
+        }
+
+        public void GetScreens()
+        {
+            splashScreens = splashScreenContainer.GetChildren();
+            for (int i = 0; i < splashScreens.Count; i++)
+            {
+                TextureRect screen = (TextureRect)splashScreens[i];
+                splashScreens.Add(screen);
+                screen.Modulate = new Color(screen.Modulate.R, screen.Modulate.G, screen.Modulate.B, 0.0f);
+            }
+        }
+
+        public async Task Fade()
+        {
+            foreach (Node screen in splashScreens)
+            {
+                // Fade In
+                Tween tween = GetTree().CreateTween();
+                tween.TweenProperty(screen, "modulate:a", 1.0f, fadeInTime);
+                await ToSignal(tween, "finished");
+
+                // Pause
+                await ToSignal(GetTree().CreateTimer(pauseTime), "timeout");
+
+                // Fade Out
+                tween = GetTree().CreateTween();
+                tween.TweenProperty(screen, "modulate:a", 0.0f, fadeOutTime);
+                await ToSignal(tween, "finished");
+
+                // Pause
+                await ToSignal(GetTree().CreateTimer(outTime), "timeout");
+            }
+            Global.GameControllerInstance.ChangeGuiScene("res://Scenes/MainMenu.tscn");
+        }
+
+
+        public override void _UnhandledInput(InputEvent @event)
+        {
+            if (@event.IsPressed())
+            {
+                Global.GameControllerInstance.ChangeGuiScene("res://Scenes/MainMenu.tscn");
+            }
         }
     }
 
-    public async void fade()
-    {
-        foreach (TextureRect screen in splashScreens)
-        {
-            // Fade In
-            Tween tween = GetTree().CreateTween();
-            tween.TweenProperty(screen, "modulate:a", 1.0f, fadeInTime);
-            await ToSignal(tween, "finished");
-
-            // Pause
-            await ToSignal(GetTree().CreateTimer(pauseTime), "timeout");
-
-            // Fade Out
-            tween = GetTree().CreateTween();
-            tween.TweenProperty(screen, "modulate:a", 0.0f, fadeOutTime);
-            await ToSignal(tween, "finished");
-
-            // Pause
-            await ToSignal(GetTree().CreateTimer(outTime), "timeout");
-        }
-        Global.gameController.ChangeGuiScene("res://Scenes/MainMenu.tscn");
-    }
-
-
-    public override void _UnhandledInput(InputEvent @event)
-    {
-        if (@event.IsPressed())
-        {
-            Global.gameController.ChangeGuiScene("res://Scenes/MainMenu.tscn");
-        }
-    }
 }

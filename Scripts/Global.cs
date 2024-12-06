@@ -1,6 +1,9 @@
 using Godot;
 
-public partial class Global : Node
+namespace GhostDungeon.Scripts
 {
-    public static GameController gameController;
+    public partial class Global : Node
+    {
+        public static GameController GameControllerInstance { get; set; }
+    }
 }
