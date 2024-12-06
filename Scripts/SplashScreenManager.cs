@@ -15,19 +15,21 @@ namespace GhostDungeon.Scripts
 
         private Godot.Collections.Array<Node> splashScreens;
 
-        public override async void _Ready()
+        public async override void _Ready()
         {
+
             GetScreens();
             await Fade();
+            Global.GameControllerInstance.ChangeGuiScene("res://Scenes/MainMenu.tscn");
         }
 
         public void GetScreens()
         {
             splashScreens = splashScreenContainer.GetChildren();
+            GD.Print(splashScreens.Count);
             for (int i = 0; i < splashScreens.Count; i++)
             {
                 TextureRect screen = (TextureRect)splashScreens[i];
-                splashScreens.Add(screen);
                 screen.Modulate = new Color(screen.Modulate.R, screen.Modulate.G, screen.Modulate.B, 0.0f);
             }
         }
@@ -52,7 +54,7 @@ namespace GhostDungeon.Scripts
                 // Pause
                 await ToSignal(GetTree().CreateTimer(outTime), "timeout");
             }
-            Global.GameControllerInstance.ChangeGuiScene("res://Scenes/MainMenu.tscn");
+
         }
 
 
