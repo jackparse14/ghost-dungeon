@@ -30,10 +30,11 @@ public partial class GameController : Node
             }
         }
         PackedScene packedScene = GD.Load<PackedScene>(newScene);
-        if(packedScene != null)
+        if (packedScene != null)
         {
             Node loadedScene = packedScene.Instantiate();
-            if (loadedScene is Node3D new3dScene) {
+            if (loadedScene is Node3D new3dScene)
+            {
                 world3D.AddChild(new3dScene);
                 current3dScene = new3dScene;
             }

@@ -173,7 +173,7 @@ layout_mode = 2
 texture = ExtResource("6_njtfj")
 expand_mode = 3
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/ContinueButton" to="." method="_on_ContinueButton_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/NewGameButton" to="." method="_on_NewGameButton_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/ContinueButton" to="." method="OnContinueButtonPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/NewGameButton" to="." method="OnNewGameButtonPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/OptionsButton" to="." method="OnOptionsButtonPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/QuitButton" to="." method="OnQuitButtonPressed"]

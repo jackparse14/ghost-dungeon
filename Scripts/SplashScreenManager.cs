@@ -1,16 +1,13 @@
 using Godot;
-using System;
 
 public partial class SplashScreenManager : Control
 {
-	[Export] PackedScene loadScene;
+    [Export] PackedScene loadScene;
     [Export] float inTime = 0.5f;
     [Export] float fadeInTime = 1.5f;
     [Export] float pauseTime = 1.5f;
     [Export] float fadeOutTime = 1.5f;
     [Export] float outTime = 0.5f;
-    //[Export] TextureRect splashScreen;
-
     [Export] Node splashScreenContainer;
 
     private Godot.Collections.Array<TextureRect> splashScreens;
@@ -24,24 +21,25 @@ public partial class SplashScreenManager : Control
     public void getScreens()
     {
         splashScreens = new Godot.Collections.Array<TextureRect>();
-        foreach(TextureRect screen in splashScreenContainer.GetChildren())
+        foreach (TextureRect screen in splashScreenContainer.GetChildren())
         {
             splashScreens.Add(screen);
             screen.Modulate = new Color(screen.Modulate.R, screen.Modulate.G, screen.Modulate.B, 0.0f);
         }
     }
 
-    public async void fade() {
+    public async void fade()
+    {
         foreach (TextureRect screen in splashScreens)
         {
             // Fade In
             Tween tween = GetTree().CreateTween();
             tween.TweenProperty(screen, "modulate:a", 1.0f, fadeInTime);
             await ToSignal(tween, "finished");
-            
+
             // Pause
             await ToSignal(GetTree().CreateTimer(pauseTime), "timeout");
-            
+
             // Fade Out
             tween = GetTree().CreateTween();
             tween.TweenProperty(screen, "modulate:a", 0.0f, fadeOutTime);
@@ -54,8 +52,10 @@ public partial class SplashScreenManager : Control
     }
 
 
-    public void unhandledInput(InputEvent input){
-        if (input.IsPressed()) {
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event.IsPressed())
+        {
             Global.gameController.ChangeGuiScene("res://Scenes/MainMenu.tscn");
         }
     }

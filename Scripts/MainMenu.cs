@@ -1,23 +1,25 @@
 using Godot;
-using System;
 
-public partial class MainMenu : Control
+namespace GhostDungeon.Scripts
 {
-	private void _on_ContinueButton_pressed()
-	{
-		GD.Print("Continue Button Pressed");
-	}
-	private void _on_NewGameButton_pressed()
-	{
-		GD.Print("New Game Button Pressed");
-	}
-	private void _on_OptionsButton_pressed()
-	{
-		GD.Print("Options Button Pressed");
-	}
-	private void _on_QuitButton_pressed()
-	{
-		GD.Print("Quit Button Pressed");
-		GetTree().Quit();
-	}
+    public partial class MainMenu : Control
+    {
+        private static void OnContinueButtonPressed()
+        {
+            GD.Print("Continue Button Pressed");
+        }
+        private static void OnNewGameButtonPressed()
+        {
+            GD.Print("New Game Button Pressed");
+        }
+        private static void OnOptionsButtonPressed()
+        {
+            GD.Print("Options Button Pressed");
+        }
+        private void OnQuitButtonPressed()
+        {
+            GD.Print("Quit Button Pressed");
+            GetTree().Quit();
+        }
+    }
 }
