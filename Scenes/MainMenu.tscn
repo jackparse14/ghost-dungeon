@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bwkswu017ktnv"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_grk1x"]
-[ext_resource type="Texture2D" uid="uid://dxvk8gukpbbm" path="res://icon.svg" id="2_q734t"]
+[ext_resource type="Texture2D" uid="uid://b8dgervkei6m6" path="res://Assets/Images/ghost-dungeon-high-resolution-logo-transparent.png" id="2_fkp3a"]
 [ext_resource type="FontFile" uid="uid://dbr1o26ygromg" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads.ttf" id="3_h0kk8"]
 [ext_resource type="FontFile" uid="uid://clat2okmvwk5k" path="res://Assets/Fonts/shadow_of_the_deads/Shadow of the Deads Over.ttf" id="4_423gf"]
 [ext_resource type="FontFile" uid="uid://cdng6c3qrt4j2" path="res://Assets/Fonts/scream_again/Scream Again.ttf" id="5_goylj"]
@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.167309, 0.103657, 0.282694, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -33,9 +34,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 120
+theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 120
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 80
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
@@ -47,8 +48,10 @@ size_flags_horizontal = 3
 alignment = 1
 
 [node name="Logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 125)
 layout_mode = 2
-texture = ExtResource("2_q734t")
+texture = ExtResource("2_fkp3a")
+expand_mode = 3
 
 [node name="MenuOptions" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -58,12 +61,12 @@ alignment = 1
 [node name="ContinueButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.180392, 0.341176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_color = Color(0.754755, 0.869639, 0.999998, 1)
+theme_override_colors/font_pressed_color = Color(0.433382, 0.70559, 0.999994, 1)
+theme_override_colors/font_focus_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_h0kk8")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
@@ -82,12 +85,12 @@ text = "CONTINUE"
 [node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.180392, 0.341176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_color = Color(0.754755, 0.869639, 0.999998, 1)
+theme_override_colors/font_pressed_color = Color(0.433382, 0.70559, 0.999994, 1)
+theme_override_colors/font_focus_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_h0kk8")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
@@ -107,12 +110,12 @@ text = "NEW GAME
 [node name="OptionsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.180392, 0.341176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_color = Color(0.754755, 0.869639, 0.999998, 1)
+theme_override_colors/font_pressed_color = Color(0.433382, 0.70559, 0.999994, 1)
+theme_override_colors/font_focus_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_423gf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
@@ -132,12 +135,12 @@ text = "OPTIONS
 [node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.180392, 0.341176, 1)
-theme_override_colors/font_hover_color = Color(0, 0.33233, 0.60355, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.178489, 0.341182, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_hover_color = Color(0.754755, 0.869639, 0.999998, 1)
+theme_override_colors/font_pressed_color = Color(0.433382, 0.70559, 0.999994, 1)
+theme_override_colors/font_focus_color = Color(0.435294, 0.705882, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_423gf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3h312")
@@ -156,7 +159,7 @@ text = "QUIT
 
 [node name="Version" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("5_goylj")
 theme_override_font_sizes/normal_font_size = 12
 text = "Ver 1.0.0

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo5f28xblajrk"]
 
-[ext_resource type="Script" path="res://Scripts/GameController.cs" id="1_kbqkf"]
-[ext_resource type="PackedScene" uid="uid://b48pys7l7fiyc" path="res://Scenes/SplashScreenManager.tscn" id="2_1spcm"]
+[ext_resource type="Script" path="res://Scripts/GameController.cs" id="1_c5ips"]
+[ext_resource type="PackedScene" uid="uid://b48pys7l7fiyc" path="res://Scenes/SplashScreenManager.tscn" id="2_7djji"]
 
 [node name="GameController" type="Node" node_paths=PackedStringArray("world2D", "world3D", "gui")]
-script = ExtResource("1_kbqkf")
+script = ExtResource("1_c5ips")
 world2D = NodePath("World2D")
 world3D = NodePath("World3D")
 gui = NodePath("GUI")
@@ -19,5 +19,5 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="SplashScreenManager" parent="GUI" instance=ExtResource("2_1spcm")]
+[node name="SplashScreenManager" parent="GUI" instance=ExtResource("2_7djji")]
 layout_mode = 1
